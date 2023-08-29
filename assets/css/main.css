@@ -1511,6 +1511,15 @@ input, select, textarea {
 							padding-top: 3em;
 						}
 
+						#messg {
+							/* Your styling rules here */
+							color: red;
+							font-size: 20px;
+							/* position: relative; /* or absolute, depending on your layout */
+    						/*top: -20px; */
+							/* Add more styles as needed */
+						}
+
 		}
 
 		@media screen and (max-width: 480px) {
