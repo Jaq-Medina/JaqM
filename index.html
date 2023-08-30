@@ -34,22 +34,25 @@
 							and my works.</h2>
 						</header>
 						<p>Hey there! I'm a passionate learner with a journey that's as dynamic as it is motivating. 
-							My educational background includes an Associate of Science degree and my current pursuit of a bachelor's degree in Computer Science. 
+							My educational background includes an Associate of Science degree and my current pursuit of a bachelor's degree in Computer Science at the Univesity of Houston. 
 							My fascination with the world of technology ignited when I witnessed my brother meticulously repair a PlayStation 3 console, sparking my interest in both hardware and software. 
 							As my journey progressed, I found my true passion in software development, an arena where I've discovered my knack for problem-solving and innovation.</p>
-
-						<p>Though I may not hold specific awards, my journey has been one of immense growth. 
-							From a challenging start that led to academic probation with a 1.2 GPA in my first year, I've fought my way back, now standing as a senior with a commendable 3.0 GPA. 
-							My portfolio speaks to my dedication, showcasing projects like a versatile Real Estate system, a web application developed with Dart/Flutter, and my own portfolio website. 
-							I'm brimming with future aspirations, eagerly anticipating opportunities in web development and the intricate interplay of both front-end and back-end realms.</p>
-							
-						<p>Resourcefulness defines my approach. I thrive on tackling complex challenges head-on, eschewing the easy path in favor of comprehensive learning. 
-							This trait, coupled with my fondness for collaboration, bodes well for my future endeavors. 
-							I've personally experienced the transformative power of education, witnessing how resilience and dedication can uplift one's trajectory. 
-							With a penchant for teamwork and a heart for impact, I envision my education positively influencing the lives of others. 
-							Let's embark on this journey of growth and discovery together.</p>
+						
+						<div id="hidden-paragraphs" style="display: none;">
+							<p>Though I may not hold specific awards, my journey has been one of immense growth. 
+								From a challenging start that led to academic probation with a 1.2 GPA in my first year, I've fought my way back, now standing as a senior with a commendable 3.0 GPA. 
+								My portfolio speaks to my dedication, showcasing projects like a versatile Real Estate system, a web application developed with Dart/Flutter, and my own portfolio website. 
+								I'm brimming with future aspirations, eagerly anticipating opportunities in web development and the intricate interplay of both front-end and back-end realms.</p>
+								
+							<p>Resourcefulness defines my approach. I thrive on tackling complex challenges head-on, eschewing the easy path in favor of comprehensive learning. 
+								This trait, coupled with my fondness for collaboration, bodes well for my future endeavors. 
+								I've personally experienced the transformative power of education, witnessing how resilience and dedication can uplift one's trajectory. 
+								With a penchant for teamwork and a heart for impact, I envision my education positively influencing the lives of others. 
+								Let's embark on this journey of growth and discovery together.</p>
+						</div>
+						
 						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
+							<li><a href="#" class="button" id="learn-more-button">Learn More</a></li>
 						</ul>
 					</section>
 
@@ -494,6 +497,22 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					})
 					.catch(error => console.error('Error!', error.message))
 				})
+			</script>
+			<script> 
+			document.addEventListener("DOMContentLoaded", function () {
+				const learnMoreButton = document.getElementById("learn-more-button");
+				const hiddenParagraphs = document.getElementById("hidden-paragraphs");
+
+				learnMoreButton.addEventListener("click", function () {
+					if (hiddenParagraphs.style.display === "none") {
+						hiddenParagraphs.style.display = "block";
+						learnMoreButton.textContent = "Show Less";
+					} else {
+						hiddenParagraphs.style.display = "none";
+						learnMoreButton.textContent = "Learn More";
+					}
+				});
+			});
 			</script>
 
 	</body>
