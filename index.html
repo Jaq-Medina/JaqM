@@ -59,9 +59,10 @@
 					<section id="two">
 						<h2>Recent Work</h2>
 						<div class="row">
+							<!--Project 1-->
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb">
-									<img src="images/thumbs/Pro_Thumb.jpg" alt="" />
+									<img src="images/thumbs/01.jpg" alt="" />
 								</a>
 
 								<!-- Full-sized images (hidden) -->
@@ -74,23 +75,36 @@
 								<h3>Magna sed consequat tempus</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
+
+							<!--Project 2-->
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb">
+								<!-- <div class="image fit thumb">
 									<img src="images/thumbs/Login_Page.jpg" alt="" />
+								</div> -->
+								<a href="images/fulls/Login_Page_740x463.png" class="image fit thumb">
+									<img src="images/thumbs/Login_Page.jpg" alt="" /> 
 								</a>
 								
 								<!-- Full-sized images (hidden) -->
 								<div style="display: none;">
-									<a href="images/fulls/02.jpg" class="image fit thumb"></a>
-									<a href="images/fulls/03.jpg" class="image fit thumb"></a>
+									<a href="images/fulls/Login_Page_740x463.png" class="image fit thumb"></a>
+									<h3>Login Page</h3>
+									<a href="images/fulls/Profile_Page_740x461.png" class="image fit thumb"></a>
+									<h3>Profile Page</h3>
+									<a href="images/fulls/Fuel_Quote_Page_740x459.png" class="image fit thumb"></a>
+									<h3>Fuel Quote Page</h3>
+									<a href="images/fulls/Quote_History_Page_740x459.png" class="image fit thumb"></a>
+									<h3>Quote History Page</h3>
 									<!-- Add more full-sized image links here -->
 								</div>
-								<h3>Ultricies lacinia interdum</h3>
+								<h3>Web Application</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
+
+							<!--Project 3-->
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb">
-									<img src="images/thumbs/01.jpg" alt="" />
+									<img src="images/thumbs/Pro_Thumb.jpg" alt="" />
 								</a>
 			
 								<!-- Full-sized images (hidden) -->
@@ -104,7 +118,7 @@
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
+								<h3>Mobile App</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<!--<article class="col-6 col-12-xsmall work-item">
@@ -542,8 +556,24 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			});
 			</script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					var fullImageLink = document.getElementById("fullImageLink");
+					var fullImage = fullImageLink.querySelector("img");
+
+					fullImage.style.display = "none"; // Initially hide the full image
+
+					fullImageLink.addEventListener("click", function (event) {
+						event.preventDefault(); // Prevent the link from navigating
+
+						if (fullImage.style.display === "none") {
+							fullImage.style.display = "block"; // Show the full image
+						} else {
+							fullImage.style.display = "none"; // Hide the full image
+						}
+					});
+				});
+			</script>
 
 	</body>
 </html>
