@@ -123,11 +123,14 @@
 								<h3><a href="link_to_your_file.pdf">Action role-playing game</a></h3>
 								<p>Develope a PC game called Let Meowt.</p>
 							</article>
+							<!--Project 5-->
+							<div id="hidden-projects" style="display: none;">
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
 								<h3>Nunc enim commodo aliquet</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
+							</div>
 							<!--<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
 								<h3>Risus ornare lacinia</h3>
@@ -135,7 +138,7 @@
 							</article>-->
 						</div>
 						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
+							<li><a href="#" class="button" id="full-port-button">Full Portfolio</a></li>
 						</ul>
 					</section>
 
@@ -540,6 +543,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					.catch(error => console.error('Error!', error.message))
 				})
 			</script>
+			<!--Script for the Learn More Button-->
 			<script> 
 			document.addEventListener("DOMContentLoaded", function () {
 				const learnMoreButton = document.getElementById("learn-more-button");
@@ -556,6 +560,23 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				});
 			});
 			</script>
+<!--Script for the Full Portfolio Button-->
+	<script> 
+	document.addEventListener("DOMContentLoaded", function () {
+		const fullPortButton = document.getElementById("full-port-button");
+		const hiddenProjects = document.getElementById("hidden-projects");
+
+		fullPortButton.addEventListener("click", function () {
+			if (hiddenProjects.style.display === "none") {
+				hiddenProjects.style.display = "block";
+				fullPortButton.textContent = "Show Less";
+			} else {
+				hiddenProjects.style.display = "none";
+				fullPortButton.textContent = "Learn More";
+			}
+		});
+	});
+	</script>
 
 	</body>
 </html>
